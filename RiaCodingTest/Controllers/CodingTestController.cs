@@ -12,12 +12,9 @@ namespace RiaCodingTest.Controllers
             _atmService = atmService;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         [HttpGet]
+        [Route("")]
+        [Route("[controller]/GetDenominations")]
         public async Task<IActionResult> GetDenominations(int amount)
         {
             var denominations = _atmService.GetDenominations(amount);

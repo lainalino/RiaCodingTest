@@ -38,6 +38,6 @@ app.UseRouting();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=CodingTest}/{action=Index}/{id?}");
+    pattern: "{controller=CodingTestController}/{action=GetDenominations}/{id?}");
 
 app.Run();
