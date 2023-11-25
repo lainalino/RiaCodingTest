@@ -19,7 +19,7 @@ namespace RiaCodingTest.APIStress
         {
             var random = new Random();
             var listCustomers = new List<Customer>();
-            int countCustomer = random.Next(1, 100);
+            int countCustomer = random.Next(2, 100);
 
             for (int index = 0; index < countCustomer; index++)
             {
