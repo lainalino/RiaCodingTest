@@ -19,7 +19,7 @@ The controller *ATMController* is responsable to get this information.
 In the class *ATMService*, the method GetDenominations checks all possible combinations that the ATM can pay.
 
 **Example:**
-
+```
 Amount: 150
 Result: 
   "15 X 10 EUR",
@@ -28,6 +28,7 @@ Result:
   "1 X 100 EUR + 1 X 50 EUR",
   "1 X 50 EUR + 10 X 10 EUR",
   "2 X 50 EUR + 5 X 10 EUR".
+```
 
 ### **1. REST server:**
 
@@ -62,6 +63,7 @@ th GetCustomers method get all the customers.
 The class *StorageService* is responsable to save and get the information from txt file
 
 **Example:**
+```
 [
 { lastName: &#39;Aaaa&#39;, firstName: &#39;Aaaa&#39;, age: 20, id: 3 },
 { lastName: &#39;Aaaa&#39;, firstName: &#39;Bbbb&#39;, age: 56, id: 2 },
@@ -82,3 +84,4 @@ Array after insert:
 { lastName: &#39;Cccc&#39;, firstName: &#39;Bbbb&#39;, age: 50, id: 1 },
 { lastName: &#39;Dddd&#39;, firstName: &#39;Aaaa&#39;, age: 70, id: 4 },
 ]
+```
