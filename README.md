@@ -2,7 +2,7 @@
 
 ### **Stacks**:
 
-Here are some notes for your cons"id"eration.
+Here are some notes for your consideration.
 
 About the Code and Framework:
 -The project is an API .net 7.
