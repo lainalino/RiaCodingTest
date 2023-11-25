@@ -12,7 +12,7 @@ About the Code and Framework:
 
 About the solution prov"id"ed:
 
-### **1. Challenging - Denomination routine:**
+### **1. Challenge - Denomination routine:**
 
 This project shows the result of how many different combinations I can withdraw the money I want to withdraw from the ATM.
 The controller *ATMController* is responsable to get this information.
