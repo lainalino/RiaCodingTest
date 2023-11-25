@@ -10,6 +10,9 @@ namespace RiaCodingTest.API.Services
     {
         private readonly string _filePath = "./Files/Customers.txt";
 
+        /// <summary> 
+        /// The code gets allt the client.
+        /// </summary>
         public async Task<string> GetCustomers()
         {
             if (File.Exists(_filePath))
@@ -22,6 +25,9 @@ namespace RiaCodingTest.API.Services
             return string.Empty;
         }
 
+        /// <summary> 
+        /// The code inserts the client into the txt file.
+        /// </summary>
         public async Task SaveCustomers(ICollection<Customer> customers)
         {
             if (!File.Exists(_filePath))

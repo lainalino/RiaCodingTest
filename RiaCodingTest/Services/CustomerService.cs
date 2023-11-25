@@ -12,11 +12,18 @@ namespace RiaCodingTest.API.Services
         {
             this._customerRepository = customerRepository;
         }
+
+        /// <summary> 
+        /// The code inserts the client into the txt file.
+        /// </summary>
         public async Task<List<Customer>> InsertCustomer(List<Customer> listCustomer)
         {
            return await _customerRepository.InsertCustomer(listCustomer);
         }
 
+        /// <summary> 
+        /// The code gets allt the client.
+        /// </summary>
         public async Task<List<Customer>> GetCustomer()
         {
             return await _customerRepository.GetCustomers();

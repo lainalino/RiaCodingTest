@@ -12,15 +12,19 @@ namespace RiaCodingTest.API.Repositories
         {
             this._storageService = storageService;
         }
+
+        /// <summary> 
+        /// The code inserts the client into the txt file.
+        /// </summary>
         public async Task<List<Customer>> InsertCustomer(List<Customer> listCustomer)
         {
             try
             {
-
                 List<Customer> _registeredCustomers = new List<Customer>();
 
                 _registeredCustomers = await GetCustomers();
 
+                //Checks if the id has already been added to the list
                 IEnumerable<int> idRegistered = _registeredCustomers
                                             .Select(a => a.Id)
                                             .Intersect(listCustomer.Select(b => b.Id))
@@ -31,6 +35,7 @@ namespace RiaCodingTest.API.Repositories
                     throw new Exception($"The Id(s): [ {string.Join(", ", idRegistered.Select(x => x))} ] already registered.");
                 }
 
+                //Get the index to insert the customer into the list
                 foreach (Customer customer in listCustomer)
                 {
                     var aux = _registeredCustomers;
@@ -39,6 +44,7 @@ namespace RiaCodingTest.API.Repositories
                     _registeredCustomers.Insert(index, customer);
                 }
 
+                //add the customer to txt file
                 await _storageService.SaveCustomers(_registeredCustomers);
 
                 return listCustomer;
@@ -49,6 +55,9 @@ namespace RiaCodingTest.API.Repositories
             }
         }
 
+        /// <summary> 
+        /// The code gets allt the client.
+        /// </summary>
         public async Task<List<Customer>> GetCustomers()
         {
             try
