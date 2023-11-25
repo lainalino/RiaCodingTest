@@ -1,6 +1,4 @@
-﻿using RiaCodingTest.Models;
-
-namespace RiaCodingTest.Services.Interfaces
+﻿namespace RiaCodingTest.API.Services.Interfaces
 {
     public interface IATMService
     {

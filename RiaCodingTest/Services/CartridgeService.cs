@@ -1,7 +1,7 @@
-﻿using RiaCodingTest.Models;
-using RiaCodingTest.Services.Interfaces;
+﻿using RiaCodingTest.API.Models;
+using RiaCodingTest.API.Services.Interfaces;
 
-namespace RiaCodingTest.Services
+namespace RiaCodingTest.API.Services
 {
     public class CartridgeService : ICartridgeService
     {

@@ -1,8 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
-
-namespace RiaCodingTest.Models
+﻿namespace RiaCodingTest.API.Models
 {
     //Class to inform the available Cartrigdes (10, 50, 100)
     public class Cartridge

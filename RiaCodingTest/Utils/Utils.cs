@@ -1,6 +1,6 @@
-﻿using RiaCodingTest.Models;
+﻿using RiaCodingTest.API.Models;
 
-namespace RiaCodingTest.Utils
+namespace RiaCodingTest.API.Utils
 {
     public static class Utils
     {

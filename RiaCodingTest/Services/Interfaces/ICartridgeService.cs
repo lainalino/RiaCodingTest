@@ -1,6 +1,6 @@
-﻿using RiaCodingTest.Models;
+﻿using RiaCodingTest.API.Models;
 
-namespace RiaCodingTest.Services.Interfaces
+namespace RiaCodingTest.API.Services.Interfaces
 {
     public interface ICartridgeService
     {

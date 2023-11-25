@@ -1,5 +1,7 @@
-using RiaCodingTest.Services;
-using RiaCodingTest.Services.Interfaces;
+using RiaCodingTest.API.Services.Interfaces;
+using RiaCodingTest.API.Services;
+using RiaCodingTest.API.Repositories.Interfaces;
+using RiaCodingTest.API.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +13,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<ICartridgeService, CartridgeService>();
 builder.Services.AddScoped<IATMService, ATMService>();
-
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IStorageService, StorageService>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,22 +26,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
-
-
-app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
-
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=CodingTestController}/{action=GetDenominations}/{id?}");
-
-app.Run();

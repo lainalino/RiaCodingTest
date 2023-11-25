@@ -1,8 +1,8 @@
-﻿using RiaCodingTest.Models;
-using RiaCodingTest.Services.Interfaces;
+﻿using RiaCodingTest.API.Models;
+using RiaCodingTest.API.Services.Interfaces;
 using System.Reflection;
 
-namespace RiaCodingTest.Services
+namespace RiaCodingTest.API.Services
 {
     public class ATMService : IATMService
     {
