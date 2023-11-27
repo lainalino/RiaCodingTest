@@ -30,7 +30,7 @@ Result:
   "2 X 50 EUR + 5 X 10 EUR".
 ```
 
-### **1. REST server:**
+### **2. Challenge - REST server:**
 
 There are two endpoints in *CustomerController*: insert and get-all 
 
@@ -42,10 +42,10 @@ curl -X 'POST' \
   -H 'Content-Type: application/json' \
   -d '[
   {
-    ""id"": 0,
-    ""firstName"": "string",
-    ""lastName"": "string",
-    ""age"": 0
+    "id": 0,
+    "firstName": "string",
+    "lastName": "string",
+    "age": 0
   }
 ]'
 ```
@@ -60,7 +60,7 @@ curl -X 'GET' \
 In the *CustomerRepository* class, the InsertCustomer method checks if there is another registration with the same id. Otherwise, the customer will be added based on the return from the GetIndex method.
 th GetCustomers method get all the customers.
 
-The class *Stor"age"Service* is responsable to save and get the information from txt file
+The class *StorageService* is responsable to save and get the information from txt file
 
 **Example:**
 ```

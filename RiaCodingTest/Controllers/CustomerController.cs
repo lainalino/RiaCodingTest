@@ -38,7 +38,6 @@ namespace RiaCodingTest.API.Controllers
 
         /// <summary> 
         /// 
-        /// <param name="listCustomer"></param>
         /// </summary>
         [HttpGet]
         [Route("[controller]/get-all")]
